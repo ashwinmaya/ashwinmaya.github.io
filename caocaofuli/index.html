@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>草草浮力影院-热门影视在线观看与精选推荐指南</title>
+    <meta name="description" content="草草浮力影院为您提供热门电影、电视剧、动漫、综艺的在线观看指南与影视资讯推荐，精选高分佳作，畅享高清流畅观影体验。">
+    <meta name="keywords" content="草草浮力影院,在线影院,电影推荐,电视剧推荐,高清影视,热门影视,观影指南">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0f1115;
+            color: #e8eaf0;
+            line-height: 1.6;
+        }
+        a {
+            color: #e50914;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ffb3b6;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #1a1c22 0%, #101218 100%);
+            border-bottom: 1px solid #2a2d36;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #e50914;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo span {
+            background: #e50914;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            letter-spacing: 0;
+        }
+        .main-nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: #b0b5bf;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+        }
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #fff;
+            border-bottom-color: #e50914;
+        }
+        .search-box {
+            display: flex;
+            background: #23252d;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            padding: 8px 16px;
+            color: #fff;
+            font-size: 14px;
+            width: 180px;
+            outline: none;
+        }
+        .search-box button {
+            background: #e50914;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .search-box button:hover {
+            background: #c20812;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, #14161c 0%, #1e2029 50%, #2a1a1f 100%);
+            padding: 60px 0;
+            border-bottom: 1px solid #2a2d36;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(229, 9, 20, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-text h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+        .hero-text h1 .highlight {
+            color: #e50914;
+        }
+        .hero-text p {
+            font-size: 16px;
+            color: #a5abb8;
+            margin-bottom: 24px;
+            max-width: 560px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #e50914;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background: #c20812;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(229, 9, 20, 0.3);
+            color: #fff;
+        }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            padding: 11px 26px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            border: 1px solid #444;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-outline:hover {
+            border-color: #e50914;
+            color: #e50914;
+        }
+        .hero-feature {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .feature-tag {
+            display: inline-block;
+            background: rgba(229, 9, 20, 0.2);
+            color: #ff8a90;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .feature-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .feature-desc {
+            color: #9aa0ae;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 50px 0;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 24px;
+            background: #e50914;
+            border-radius: 2px;
+        }
+        .section-sub {
+            color: #7a8090;
+            font-size: 15px;
+            margin-top: -18px;
+            margin-bottom: 28px;
+        }
+
+        /* Category Chips */
+        .category-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+        .chip {
+            background: #1e2129;
+            border: 1px solid #2e323c;
+            color: #b0b5bf;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .chip:hover,
+        .chip.active {
+            background: #e50914;
+            border-color: #e50914;
+            color: #fff;
+        }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 24px;
+        }
+        .movie-card {
+            background: #1a1d24;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #242833;
+        }
+        .movie-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+        .movie-poster {
+            aspect-ratio: 2/3;
+            background: linear-gradient(135deg, #2a2d38, #191c24);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .movie-poster .play-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(229, 9, 20, 0.85);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .movie-card:hover .play-icon {
+            opacity: 1;
+        }
+        .movie-poster .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffb3b6;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .movie-info {
+            padding: 14px;
+        }
+        .movie-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 6px;
+            color: #e8eaf0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .movie-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #7a8090;
+            font-size: 13px;
+        }
+        .movie-rating {
+            color: #ffa500;
+            font-weight: 600;
+        }
+
+        /* Update List */
+        .update-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .update-item {
+            background: #1a1d24;
+            border-radius: 8px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #242833;
+            transition: border-color 0.3s;
+        }
+        .update-item:hover {
+            border-color: #e50914;
+        }
+        .update-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .update-tag {
+            background: #e50914;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .update-tag.tag-new {
+            background: #2e7d32;
+        }
+        .update-name {
+            font-size: 15px;
+            color: #d0d4dd;
+        }
+        .update-time {
+            color: #6b7280;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        /* Ranking */
+        .rank-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .rank-card {
+            background: #1a1d24;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #242833;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .rank-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #e50914;
+            opacity: 0.7;
+            line-height: 1;
+        }
+        .rank-card:nth-child(1) .rank-number {
+            opacity: 1;
+            color: #ffd700;
+        }
+        .rank-card:nth-child(2) .rank-number {
+            opacity: 1;
+            color: #c0c0c0;
+        }
+        .rank-card:nth-child(3) .rank-number {
+            opacity: 1;
+            color: #cd7f32;
+        }
+        .rank-content h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .rank-content p {
+            font-size: 13px;
+            color: #8a90a0;
+            margin-bottom: 8px;
+        }
+        .rank-link {
+            font-size: 13px;
+            color: #e50914;
+        }
+
+        /* Feature Banner */
+        .feature-banner {
+            background: linear-gradient(90deg, #1e2029, #2a1a1f);
+            border-radius: 16px;
+            padding: 36px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border: 1px solid #2e323c;
+        }
+        .feature-banner h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .feature-banner p {
+            color: #9aa0ae;
+        }
+        .feature-banner .btn-primary {
+            font-size: 16px;
+            padding: 14px 32px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 50px 0 60px;
+        }
+        .faq-list {
+            max-width: 900px;
+        }
+        .faq-item {
+            background: #1a1d24;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            border: 1px solid #242833;
+        }
+        .faq-item summary {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e8eaf0;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item summary::after {
+            content: "+";
+            font-size: 22px;
+            color: #e50914;
+            margin-left: 12px;
+        }
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+        .faq-item p {
+            margin-top: 12px;
+            color: #9aa0ae;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #0b0d11;
+            border-top: 1px solid #242833;
+            padding: 40px 0 30px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            color: #7a8090;
+            font-size: 14px;
+        }
+        .footer-links a:hover {
+            color: #e50914;
+        }
+        .footer-copy {
+            color: #5a6070;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .main-nav {
+                justify-content: center;
+                gap: 16px;
+            }
+            .search-box {
+                width: 100%;
+            }
+            .search-box input {
+                flex: 1;
+                width: auto;
+            }
+            .update-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .section {
+                padding: 36px 0;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 14px;
+            }
+            .hero {
+                padding: 40px 0;
+            }
+            .hero-text h1 {
+                font-size: 26px;
+            }
+            .feature-banner {
+                padding: 24px;
+                text-align: center;
+                justify-content: center;
+            }
+            .rank-list {
+                grid-template-columns: 1fr;
+            }
+            .footer-links {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                草草浮力影院<span>HD</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="active">首页</a>
+                <a href="#">电影</a>
+                <a href="#">电视剧</a>
+                <a href="#">动漫</a>
+                <a href="#">综艺</a>
+                <a href="#">排行榜</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索影视、演员...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>发现精彩影视<br>尽在<span class="highlight">草草浮力影院</span></h1>
+                <p>精选热门电影、剧集与动漫，实时更新全网高分佳作。清爽无广告的观看体验，让每一次观影都成为享受。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">立即观影</a>
+                    <a href="#" class="btn-outline">浏览片单</a>
+                </div>
+            </div>
+            <div class="hero-feature">
+                <span class="feature-tag">今日推荐</span>
+                <h2 class="feature-title">🔥 本周口碑黑马</h2>
+                <p class="feature-desc">多部新片上线，涵盖悬疑、科幻、治愈等题材。根据用户真实评分与观影热度综合推荐，帮你快速找到值得一看的精品内容。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">热门分类</h2>
+            <div class="category-chips">
+                <span class="chip active">全部</span>
+                <span class="chip">动作</span>
+                <span class="chip">科幻</span>
+                <span class="chip">悬疑</span>
+                <span class="chip">爱情</span>
+                <span class="chip">喜剧</span>
+                <span class="chip">动画</span>
+                <span class="chip">纪录片</span>
+            </div>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <span class="badge">热播</span>
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">星际迷航：新纪元</div>
+                        <div class="movie-meta">
+                            <span>科幻</span>
+                            <span class="movie-rating">★ 8.7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <span class="badge">高分</span>
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">迷雾追踪</div>
+                        <div class="movie-meta">
+                            <span>悬疑</span>
+                            <span class="movie-rating">★ 9.1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">夏日柠檬汽水</div>
+                        <div class="movie-meta">
+                            <span>爱情</span>
+                            <span class="movie-rating">★ 7.8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <span class="badge">独播</span>
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">深海历险记</div>
+                        <div class="movie-meta">
+                            <span>动画</span>
+                            <span class="movie-rating">★ 8.9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">都市边缘人</div>
+                        <div class="movie-meta">
+                            <span>剧情</span>
+                            <span class="movie-rating">★ 8.2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <span class="badge">新片</span>
+                        <span class="play-icon">▶</span>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">笑闹江湖2</div>
+                        <div class="movie-meta">
+                            <span>喜剧</span>
+                            <span class="movie-rating">★ 7.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background:#12141a;">
+        <div class="container">
+            <h2 class="section-title">最近更新</h2>
+            <p class="section-sub">实时收录全网最新上线的影视内容，不再错过任何精彩。</p>
+            <div class="update-list">
+                <div class="update-item">
+                    <div class="update-info">
+                        <span class="update-tag tag-new">更新</span>
+                        <span class="update-name">长风渡 第24集</span>
+                    </div>
+                    <span class="update-time">2小时前</span>
+                </div>
+                <div class="update-item">
+                    <div class="update-info">
+                        <span class="update-tag">更新</span>
+                        <span class="update-name">无声的证词 第12集</span>
+                    </div>
+                    <span class="update-time">3小时前</span>
+                </div>
+                <div class="update-item">
+                    <div class="update-info">
+                        <span class="update-tag tag-new">新片</span>
+                        <span class="update-name">极速营救 (电影)</span>
+                    </div>
+                    <span class="update-time">5小时前</span>
+                </div>
+                <div class="update-item">
+                    <div class="update-info">
+                        <span class="update-tag">更新</span>
+                        <span class="update-name">青春抛物线 第16集</span>
+                    </div>
+                    <span class="update-time">6小时前</span>
+                </div>
+                <div class="update-item">
+                    <div class="update-info">
+                        <span class="update-tag tag-new">新番</span>
+                        <span class="update-name">月光下的异世界 第3话</span>
+                    </div>
+                    <span class="update-time">8小时前</span>
+                </div>
+                <div class="update-item">
+                    <div class="update-info">
+                        <span class="update-tag">更新</span>
+                        <span class="update-name">律政俏佳人 第8集</span>
+                    </div>
+                    <span class="update-time">10小时前</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">热播排行榜</h2>
+            <p class="section-sub">根据站内用户播放热度与评分综合排序，每周更新。</p>
+            <div class="rank-list">
+                <div class="rank-card">
+                    <span class="rank-number">1</span>
+                    <div class="rank-content">
+                        <h3>星际迷航：新纪元</h3>
+                        <p>科幻巨制，视觉效果震撼，剧情紧凑。</p>
+                        <a href="#" class="rank-link">立即观看 →</a>
+                    </div>
+                </div>
+                <div class="rank-card">
+                    <span class="rank-number">2</span>
+                    <div class="rank-content">
+                        <h3>迷雾追踪</h3>
+                        <p>烧脑悬疑，反转不断，口碑持续走高。</p>
+                        <a href="#" class="rank-link">立即观看 →</a>
+                    </div>
+                </div>
+                <div class="rank-card">
+                    <span class="rank-number">3</span>
+                    <div class="rank-content">
+                        <h3>长风渡</h3>
+                        <p>古装权谋大剧，演员演技在线。</p>
+                        <a href="#" class="rank-link">立即观看 →</a>
+                    </div>
+                </div>
+                <div class="rank-card">
+                    <span class="rank-number">4</span>
+                    <div class="rank-content">
+                        <h3>深海历险记</h3>
+                        <p>合家欢动画电影，画面精美。</p>
+                        <a href="#" class="rank-link">立即观看 →</a>
+                    </div>
+                </div>
+                <div class="rank-card">
+                    <span class="rank-number">5</span>
+                    <div class="rank-content">
+                        <h3>都市边缘人</h3>
+                        <p>现实题材，直击人心。</p>
+                        <a href="#" class="rank-link">立即观看 →</a>
+                    </div>
+                </div>
+                <div class="rank-card">
+                    <span class="rank-number">6</span>
+                    <div class="rank-content">
+                        <h3>月光下的异世界</h3>
+                        <p>本季热门新番，奇幻冒险。</p>
+                        <a href="#" class="rank-link">立即观看 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background:#12141a;">
+        <div class="container">
+            <div class="feature-banner">
+                <div>
+                    <h2>💎 开通会员，畅享全站高清</h2>
+                    <p>无广告打扰、最高蓝光画质、抢先看独播内容</p>
+                </div>
+                <a href="#" class="btn-primary">了解会员特权</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>草草浮力影院提供哪些类型的影视内容？</summary>
+                    <p>平台聚合了电影、电视剧、动漫、综艺、纪录片等多种类型的影视资源，覆盖国内外热门与经典作品，用户可根据分类或搜索快速找到感兴趣的内容。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>如何获取最新的影视更新通知？</summary>
+                    <p>您可以将经常访问的影视剧加入收藏或关注，系统会在内容更新时通过站内消息或您绑定的推送渠道提醒您。同时首页的「最近更新」板块也会实时展示最新上线的内容。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>观看过程中遇到卡顿或无法播放怎么办？</summary>
+                    <p>建议先检查本地网络连接状态，尝试切换播放线路或清晰度。若问题仍然存在，可尝试清理浏览器缓存或更换支持HTML5播放的现代浏览器。如依旧无法解决，请联系站内客服获取帮助。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>是否需要安装特定播放器软件？</summary>
+                    <p>不需要。草草浮力影院采用网页端直接播放方案，支持主流浏览器在线观看，无需额外安装任何播放器插件或客户端软件，打开网页即可流畅观影。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>如何反馈视频资源错误或提出建议？</summary>
+                    <p>每个视频页面均设有「反馈」按钮，您可一键提交问题。也可以在首页底部通过意见反馈表单联系我们，我们会尽快处理每条反馈并优化观影体验。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">帮助中心</a>
+                <a href="#">内容合作</a>
+                <a href="#">隐私政策</a>
+                <a href="#">意见反馈</a>
+            </div>
+            <div class="footer-copy">
+                © 2024 草草浮力影院 版权所有 · 本站内容仅供学习交流，请勿用于商业用途
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
