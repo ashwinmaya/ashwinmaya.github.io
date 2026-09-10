@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICACG官方网站 - 最新地址发布与ACG资源导航站</title>
+    <meta name="description" content="PICACG官方网站提供最新地址发布、ACG漫画与资源导航。这里汇总PICACG站点动态、使用指引、常见问题及安全访问方式，为二次元爱好者提供便捷入口。">
+    <meta name="keywords" content="PICACG官方网站,PICACG,官网地址,ACG导航,漫画资源,二次元,地址发布">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2a3a;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #1b1e2b 0%, #2a2d45 100%);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .header-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(145deg, #ff7a59, #ff4d6d);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            color: #fff;
+            box-shadow: 0 6px 14px rgba(255,77,109,0.3);
+        }
+        .logo-text {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo-text span {
+            color: #ff7a59;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .main-nav ul li a {
+            color: #ccd0e0;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            color: #ff9a76;
+            border-bottom-color: #ff9a76;
+        }
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+        .btn-outline-light {
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 18px;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .btn-outline-light:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .btn-solid {
+            background: #ff7a59;
+            color: #fff;
+            padding: 8px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-solid:hover {
+            background: #ff5f3c;
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero-section {
+            background: linear-gradient(145deg, #1b1e2b, #2a2d45);
+            color: #fff;
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            background: linear-gradient(90deg, #ff9a76, #ff4d6d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            color: #b8c0d4;
+            max-width: 720px;
+            margin: 0 auto 35px;
+        }
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-hero-primary {
+            background: #ff7a59;
+            color: #fff;
+            padding: 13px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 8px 20px rgba(255,122,89,0.35);
+            transition: all 0.25s;
+        }
+        .btn-hero-primary:hover {
+            background: #ff5f3c;
+            transform: translateY(-2px);
+        }
+        .btn-hero-secondary {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+            padding: 13px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.25s;
+        }
+        .btn-hero-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .hero-badges {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #9aa3b8;
+        }
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .badge-item::before {
+            content: "✓";
+            color: #ff7a59;
+            font-weight: 700;
+        }
+
+        /* Notice bar */
+        .notice-bar {
+            background: #fff7e6;
+            border-bottom: 1px solid #f0dbb8;
+            padding: 12px 0;
+            font-size: 0.95rem;
+        }
+        .notice-bar .container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .notice-label {
+            background: #ff7a59;
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .notice-text {
+            color: #6b5a3e;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Section common */
+        .section {
+            padding: 60px 0;
+        }
+        .section-title-wrap {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e2a3a;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff7a59, #ff4d6d);
+            border-radius: 4px;
+        }
+        .section-sub {
+            color: #6b7890;
+            margin-top: 18px;
+            font-size: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Card grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .card-item {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eef0f4;
+        }
+        .card-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(0,0,0,0.08);
+            border-color: #ffd9cf;
+        }
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            background: #f0f4ff;
+            color: #ff6a4d;
+        }
+        .card-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .card-item p {
+            color: #5a6a80;
+            font-size: 0.95rem;
+        }
+        .card-link {
+            display: inline-block;
+            margin-top: 14px;
+            color: #ff6a4d;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Two column info */
+        .info-section {
+            background: #fff;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .info-img-placeholder {
+            background: linear-gradient(145deg, #ff9a76, #ff4d6d, #1b1e2b);
+            border-radius: 20px;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            opacity: 0.9;
+            box-shadow: 0 20px 40px rgba(255,77,109,0.2);
+        }
+        .info-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        .info-content p {
+            color: #4a5a70;
+            margin-bottom: 16px;
+        }
+        .feature-list {
+            margin-top: 20px;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #4a5a70;
+        }
+        .feature-list li::before {
+            content: "▹";
+            color: #ff7a59;
+            font-weight: bold;
+        }
+
+        /* Access steps */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            border: 1px solid #eef0f4;
+            transition: all 0.3s;
+        }
+        .step-card:hover {
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .step-num {
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(145deg, #ff7a59, #ff4d6d);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 16px;
+        }
+        .step-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .step-card p {
+            color: #5a6a80;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #f0f2f7;
+        }
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            padding: 22px 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e8ebf0;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e2a3a;
+        }
+        .faq-item p {
+            color: #5a6a80;
+            font-size: 0.95rem;
+        }
+
+        /* CTA band */
+        .cta-band {
+            background: linear-gradient(90deg, #1b1e2b, #2a2d45);
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .cta-band h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .cta-band p {
+            color: #b8c0d4;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #141724;
+            color: #8a91a8;
+            padding: 40px 0 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-brand p {
+            margin-top: 12px;
+            max-width: 320px;
+            font-size: 0.9rem;
+        }
+        .footer-links h4 {
+            color: #c6cbd8;
+            margin-bottom: 16px;
+        }
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+        .footer-links ul li a {
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-links ul li a:hover {
+            color: #ff9a76;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #2a2d45;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #6a7188;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav ul {
+                gap: 18px;
+            }
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-img-placeholder {
+                min-height: 200px;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .hero-badges {
+                gap: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero-section h1 {
+                font-size: 1.6rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-wrap">
+        <div class="logo-area">
+            <div class="logo-icon">P</div>
+            <div class="logo-text">PICACG<span>官网</span></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">最新地址</a></li>
+                <li><a href="#">漫画分类</a></li>
+                <li><a href="#">使用指南</a></li>
+                <li><a href="#">常见问题</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="btn-outline-light">收藏本站</a>
+            <a href="#" class="btn-solid">获取最新地址</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero-section">
+    <div class="container">
+        <h1>PICACG官方网站入口</h1>
+        <p>PICACG是深受二次元爱好者喜爱的漫画与ACG资源平台。我们致力于为你提供稳定的访问方式、最新的站点动态以及丰富的漫画阅读体验。</p>
+        <div class="hero-btns">
+            <a href="#" class="btn-hero-primary">进入最新地址</a>
+            <a href="#" class="btn-hero-secondary">阅读使用指南</a>
+        </div>
+        <div class="hero-badges">
+            <div class="badge-item">海量漫画资源</div>
+            <div class="badge-item">每日更新</div>
+            <div class="badge-item">高清画质</div>
+            <div class="badge-item">稳定访问方案</div>
+        </div>
+    </div>
+</section>
+
+<div class="notice-bar">
+    <div class="container">
+        <span class="notice-label">最新公告</span>
+        <span class="notice-text">PICACG官网地址已更新，请收藏本页面或通过下方按钮获取最新访问域名，避免走失。</span>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title-wrap">
+            <h2 class="section-title">PICACG核心功能</h2>
+            <p class="section-sub">一个集合漫画阅读、资源搜索、社区交流的ACG综合平台</p>
+        </div>
+        <div class="card-grid">
+            <div class="card-item">
+                <div class="card-icon">📚</div>
+                <h3>海量漫画资源</h3>
+                <p>涵盖日漫、韩漫、国漫及各类同人作品，分类细致，标签丰富，满足不同兴趣读者的需求。</p>
+                <a href="#" class="card-link">浏览分类 →</a>
+            </div>
+            <div class="card-item">
+                <div class="card-icon">🔄</div>
+                <h3>每日准时更新</h3>
+                <p>热门作品保持高频率更新，让你第一时间追读到最新章节，不再错过精彩剧情。</p>
+                <a href="#" class="card-link">查看更新 →</a>
+            </div>
+            <div class="card-item">
+                <div class="card-icon">🔍</div>
+                <h3>智能搜索</h3>
+                <p>支持按名称、作者、标签等多维度搜索，快速定位你想看的漫画作品，省时省力。</p>
+                <a href="#" class="card-link">开始搜索 →</a>
+            </div>
+            <div class="card-item">
+                <div class="card-icon">💬</div>
+                <h3>社区互动</h3>
+                <p>每部作品都有讨论区，可以发表感想、推荐作品、与其他同好交流心得。</p>
+                <a href="#" class="card-link">进入社区 →</a>
+            </div>
+            <div class="card-item">
+                <div class="card-icon">⭐</div>
+                <h3>收藏与订阅</h3>
+                <p>一键收藏喜欢的漫画，订阅追更列表，更新时自动提醒，阅读进度云端同步。</p>
+                <a href="#" class="card-link">了解详情 →</a>
+            </div>
+            <div class="card-item">
+                <div class="card-icon">📱</div>
+                <h3>多端适配</h3>
+                <p>网站针对手机、平板与桌面浏览器优化，随时随地都能获得舒适的阅读体验。</p>
+                <a href="#" class="card-link">访问指南 →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section info-section">
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-img-placeholder">
+                PICACG
+            </div>
+            <div class="info-content">
+                <h2>为什么选择PICACG？</h2>
+                <p>PICACG经过多年的积累，建立了完善的内容体系与用户服务机制。我们不仅提供丰富的漫画资源，更注重用户的访问体验与内容质量。</p>
+                <ul class="feature-list">
+                    <li>精心整理的漫画分类，从少年热血到少女恋爱，从悬疑推理到科幻冒险</li>
+                    <li>高清原图与多种阅读模式，深色背景护眼阅读更舒适</li>
+                    <li>专业的内容审核团队，保障作品质量与阅读安全</li>
+                    <li>响应快速的社区反馈机制，你的建议会被认真对待</li>
+                    <li>多渠道地址发布，确保老用户不迷路</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title-wrap">
+            <h2 class="section-title">如何访问PICACG官网</h2>
+            <p class="section-sub">由于网络环境变化，PICACG会不定期更新访问地址，请通过以下方式获取最新入口</p>
+        </div>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>收藏本页面</h3>
+                <p>将本页面加入浏览器收藏夹，当需要访问时第一时间回来查看最新地址。</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>获取最新域名</h3>
+                <p>点击页面顶部的“获取最新地址”按钮，系统会为你展示当前有效的访问域名。</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>使用备用入口</h3>
+                <p>部分网络环境下可能需要使用备用域名或镜像站，我们提供了多个备选方案。</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>关注公告</h3>
+                <p>留意本站公告栏，我们会第一时间发布地址变动信息，确保用户及时了解。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section faq-section">
+    <div class="container">
+        <div class="section-title-wrap">
+            <h2 class="section-title">常见问题解答</h2>
+            <p class="section-sub">关于PICACG的使用疑问，这里为你集中解答</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>PICACG官方网站打不开怎么办？</h3>
+                <p>首先确认你使用的域名是否正确。如果原有域名无法访问，可能是由于网络环境变化所致，请回到本导航页查看最新地址，或尝试使用备用入口。</p>
+            </div>
+            <div class="faq-item">
+                <h3>PICACG需要注册账号吗？</h3>
+                <p>普通浏览和阅读大部分内容无需注册。但若需要使用收藏、订阅、评论等个性化功能，建议注册一个免费账号，便于同步你的阅读数据。</p>
+            </div>
+            <div class="faq-item">
+                <h3>网站加载速度慢是什么原因？</h3>
+                <p>加载速度受网络运营商、所处地区及访问时段影响。可以尝试切换网络（如从WiFi切换到移动数据），或选择网络空闲时段访问。</p>
+            </div>
+            <div class="faq-item">
+                <h3>如何反馈网站问题或建议？</h3>
+                <p>在网站内找到“意见反馈”入口，或通过社区联系管理员。我们会认真阅读每一条反馈，不断优化服务和体验。</p>
+            </div>
+            <div class="faq-item">
+                <h3>PICACG的内容是免费的吗？</h3>
+                <p>PICACG上的绝大部分内容都可以免费阅读。部分特殊功能或内容可能会以合理方式提供服务，具体以网站内说明为准。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="container">
+        <h2>准备好开始你的ACG之旅了吗？</h2>
+        <p>立即获取PICACG最新访问地址，进入丰富多彩的漫画世界。收藏本页，永不迷路。</p>
+        <div class="hero-btns">
+            <a href="#" class="btn-hero-primary">获取最新地址</a>
+            <a href="#" class="btn-hero-secondary">浏览漫画分类</a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 style="color:#fff;">PICACG官方导航</h3>
+                <p>本页面为PICACG爱好者提供官方网站入口、地址更新信息及使用帮助，致力于打造便捷的ACG资源访问体验。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速入口</h4>
+                <ul>
+                    <li><a href="#">最新地址</a></li>
+                    <li><a href="#">漫画分类</a></li>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>帮助支持</h4>
+                <ul>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">社区规则</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 PICACG 导航站 · 本页面仅提供信息导航 · 请支持正版内容</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
