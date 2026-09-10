@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>玩弄老太婆BBW视频-中老年影视内容分类与浏览指南</title>
+  <meta name="description" content="玩弄老太婆BBW视频专区，提供中老年题材影视作品分类、热门推荐与观影指南。内容严谨筛选，专注剧情与人物塑造，满足特定题材浏览需求。">
+  <meta name="keywords" content="玩弄老太婆BBW视频,中老年题材,影视分类,观影指南,BBW剧情片">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f2f0eb;
+      color: #2e2a28;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* header */
+    .site-header {
+      background: #3e2f2a;
+      color: #f5ede4;
+      padding: 18px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-area h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #e6d7c2;
+    }
+    .logo-area h1 span {
+      color: #cf9f7c;
+    }
+    .tagline {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+    .main-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      list-style: none;
+    }
+    .main-nav a {
+      color: #e6d7c2;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 8px;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+    .main-nav a:hover {
+      background: #5f4b42;
+      color: #fff;
+    }
+    /* hero */
+    .hero {
+      background: linear-gradient(145deg, #4b3a33 0%, #2a211e 100%);
+      color: #eaded1;
+      padding: 48px 0;
+      margin-bottom: 40px;
+      border-radius: 0 0 60px 60px;
+    }
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #f4e3d3;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+    }
+    .hero-badge {
+      background: rgba(255,255,240,0.12);
+      padding: 16px 22px;
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
+      border: 1px solid #7d6b5c;
+      text-align: center;
+    }
+    .hero-badge strong {
+      display: block;
+      font-size: 2.2rem;
+      color: #dbbd9f;
+      letter-spacing: 2px;
+    }
+    .hero-badge span {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+    /* section title */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 50px 0 25px;
+      padding-left: 12px;
+      border-left: 8px solid #8b6f5e;
+      color: #2e2a28;
+    }
+    .section-sub {
+      color: #6d5d53;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+    /* cards grid (分类) */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .cat-card {
+      background: #fffaf5;
+      border-radius: 24px;
+      padding: 24px 18px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+      transition: 0.2s;
+      border: 1px solid #e2d6ca;
+    }
+    .cat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 20px rgba(0,0,0,0.06);
+    }
+    .cat-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #5f3e2e;
+    }
+    .cat-card p {
+      font-size: 0.95rem;
+      color: #5b4d44;
+    }
+    .cat-card .tag {
+      display: inline-block;
+      background: #e9dccd;
+      padding: 2px 12px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      margin-top: 12px;
+    }
+    /* video list rows (热门) */
+    .video-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .video-row {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.02);
+      border: 1px solid #dbd0c4;
+      transition: 0.15s;
+    }
+    .video-row:hover {
+      background: #fcf6ef;
+    }
+    .video-rank {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #c7b09d;
+      min-width: 45px;
+      text-align: center;
+    }
+    .video-info {
+      flex: 1;
+    }
+    .video-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3e2e24;
+    }
+    .video-info p {
+      font-size: 0.9rem;
+      color: #6f5e52;
+    }
+    .video-meta {
+      background: #efe4d9;
+      border-radius: 30px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #4a372b;
+    }
+    /* 观影指南 */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .guide-item {
+      background: #faf4ec;
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid #e2d2c2;
+    }
+    .guide-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      color: #4c382b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .guide-item ul {
+      list-style: none;
+    }
+    .guide-item li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .guide-item li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #a38268;
+      font-weight: bold;
+    }
+    /* faq */
+    .faq-block {
+      background: #f5ede4;
+      border-radius: 40px;
+      padding: 30px;
+      margin: 50px 0;
+    }
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #dccfc1;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-item h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3b2d22;
+      margin-bottom: 6px;
+    }
+    /* footer */
+    .site-footer {
+      background: #2a211e;
+      color: #b7a69a;
+      padding: 30px 0;
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: #beaa9b;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    /* responsive */
+    @media (max-width: 800px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+      .header-flex {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .main-nav ul {
+        justify-content: center;
+      }
+      .section-title {
+        font-size: 1.7rem;
+      }
+      .video-row {
+        flex-wrap: wrap;
+        padding: 14px;
+      }
+      .video-rank {
+        font-size: 1.2rem;
+        min-width: 35px;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 14px;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .logo-area h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo-area">
+        <h1>银幕<span>·</span>成熟</h1>
+        <div class="tagline">中老年题材影视专研 · 剧情向</div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#category">题材库</a></li>
+          <li><a href="#hot">热门作品</a></li>
+          <li><a href="#guide">观影指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO 首屏 -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <h2>成熟叙事 · 银发魅力<br>专属题材深度浏览</h2>
+          <p>聚焦中老年主角的情感与故事，涵盖剧情、生活、家庭等多元风格。这里提供经过整理的影视分类、热门片单与鉴赏视角，帮助观众快速找到感兴趣的内容。</p>
+        </div>
+        <div class="hero-badge">
+          <strong>100+</strong>
+          <span>精选片源 · 持续更新</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分类板块 -->
+    <section id="category" class="container">
+      <h2 class="section-title">题材分类</h2>
+      <p class="section-sub">按内容气质与叙事重点划分，直达你偏好的故事类型</p>
+      <div class="category-grid">
+        <article class="cat-card">
+          <h3>家庭·温情</h3>
+          <p>代际关系、黄昏恋、家庭和解。细腻的情感流动，展现成熟角色的内心世界。</p>
+          <span class="tag">约28部</span>
+        </article>
+        <article class="cat-card">
+          <h3>剧情·人生</h3>
+          <p>以人生经历为轴，坎坷与释怀。侧重人物塑造与社会观察，叙事沉稳。</p>
+          <span class="tag">约32部</span>
+        </article>
+        <article class="cat-card">
+          <h3>喜剧·轻快</h3>
+          <p>幽默中带温暖，不刻板不冒犯。轻松节奏下的生活趣事，适合休闲观赏。</p>
+          <span class="tag">约18部</span>
+        </article>
+        <article class="cat-card">
+          <h3>悬疑·深度</h3>
+          <p>成熟主角的谜局与解构，逻辑与情感交织。非套路化的类型尝试。</p>
+          <span class="tag">约15部</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 热门影视排行 / 类似“玩弄老太婆BBW视频”题材延伸 -->
+    <section id="hot" class="container">
+      <h2 class="section-title">本周热门 · 中老年题材佳作</h2>
+      <p class="section-sub">根据观赏指数与题材契合度整理，点击即可了解详情</p>
+      <div class="video-list">
+        <div class="video-row">
+          <div class="video-rank">01</div>
+          <div class="video-info">
+            <h4>《岁月余晖》</h4>
+            <p>寡居老太与旧友重逢，一段被搁置的情感重新泛起涟漪。细腻表演，平静之下暗流涌动。</p>
+          </div>
+          <div class="video-meta">剧情 · 情感</div>
+        </div>
+        <div class="video-row">
+          <div class="video-rank">02</div>
+          <div class="video-info">
+            <h4>《第二春》</h4>
+            <p>养老院里的幽默群像，老奶奶们的机智与生命力，打破刻板印象的轻喜剧。</p>
+          </div>
+          <div class="video-meta">喜剧 · 群像</div>
+        </div>
+        <div class="video-row">
+          <div class="video-rank">03</div>
+          <div class="video-info">
+            <h4>《暮色迷局》</h4>
+            <p>退休女教师意外卷入社区悬案，凭智慧拨开迷雾，故事节奏紧凑，视角独特。</p>
+          </div>
+          <div class="video-meta">悬疑 · 推理</div>
+        </div>
+        <div class="video-row">
+          <div class="video-rank">04</div>
+          <div class="video-info">
+            <h4>《厨房里的哲学》</h4>
+            <p>美食与代际碰撞，祖母的食谱连接整个家族。温暖治愈，适合静心观看。</p>
+          </div>
+          <div class="video-meta">生活 · 治愈</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 观影指南 (内容价值) -->
+    <section id="guide" class="container">
+      <h2 class="section-title">观影指南与题材解析</h2>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <h3>🔍 如何选择</h3>
+          <ul>
+            <li>根据偏好：温情向还是故事性强？</li>
+            <li>看演员阵容：成熟戏骨往往有深度诠释</li>
+            <li>参考片长与节奏：部分作品偏慢热</li>
+            <li>关注导演风格：不同导演视角差异大</li>
+          </ul>
+        </div>
+        <div class="guide-item">
+          <h3>🎬 内容特点</h3>
+          <ul>
+            <li>多以真实生活细节为基底</li>
+            <li>人物心理刻画优于特效场面</li>
+            <li>涉及代际、衰老、孤独与温暖</li>
+            <li>非说教，更强调理解与陪伴</li>
+          </ul>
+        </div>
+        <div class="guide-item">
+          <h3>⚠️ 观影提示</h3>
+          <ul>
+            <li>部分作品探讨沉重话题，请酌情观看</li>
+            <li>建议与家人一起观赏，促进交流</li>
+            <li>平台版本可能删减，注意选集</li>
+            <li>尊重多元审美，理性讨论</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container">
+      <div class="faq-block">
+        <h2 style="font-size:1.8rem; margin-bottom:18px; color:#3b2d22;">常见问题</h2>
+        <div class="faq-item">
+          <h3>“玩弄老太婆BBW视频”具体指什么？</h3>
+          <p>这是对一类以中老年女性为主角、偏重情感或特定叙事的影视内容的俗称。本站仅提供题材介绍与分类，不收录任何低俗或违规内容。</p>
+        </div>
+        <div class="faq-item">
+          <h3>这类题材的主流受众是谁？</h3>
+          <p>多数为喜欢成熟角色、关注代际关系或深度剧情的观众。也包括寻找非主流叙事的影迷。年龄分布较广，且近年关注度上升。</p>
+        </div>
+        <div class="faq-item">
+          <h3>如何快速找到符合预期的作品？</h3>
+          <p>可先通过上方的“题材分类”缩小范围，再参考热门列表中的剧情简介。本站还将陆续增加用户标记功能。</p>
+        </div>
+        <div class="faq-item">
+          <h3>内容审核与安全如何保证？</h3>
+          <p>所有推荐内容均来自公开影视资料，我们严格过滤低俗与违规信息。仅提供信息参考，不直接提供任何非法链接。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">关于我们</a>
+        <a href="#">题材收录标准</a>
+        <a href="#">免责声明</a>
+        <a href="#">反馈建议</a>
+      </div>
+      <p>© 2025 银幕·成熟 | 专注中老年题材影视信息服务 · 内容持续优化</p>
+    </div>
+  </footer>
+</body>
+</html>
